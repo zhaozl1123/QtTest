@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1621</width>
+    <height>896</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabPages">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>1581</width>
+      <height>801</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tabPage1">
+     <attribute name="title">
+      <string>数据库测试</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>161</width>
+        <height>185</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout">
+       <property name="verticalSpacing">
+        <number>10</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="host_label">
+         <property name="text">
+          <string>HOST</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="host_edit">
+         <property name="placeholderText">
+          <string>127.0.0.1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="port_label">
+         <property name="text">
+          <string>PORT</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="port_edit">
+         <property name="placeholderText">
+          <string>3306</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="user_label">
+         <property name="text">
+          <string>USER</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="user_edit">
+         <property name="placeholderText">
+          <string>root</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="password_label">
+         <property name="text">
+          <string>PWD</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="password_edit">
+         <property name="inputMask">
+          <string/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>000000</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="mysql_connection_test">
+         <property name="text">
+          <string>连接测试</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QTextBrowser" name="widget_mysqlTestMsgBox">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>10</y>
+        <width>661</width>
+        <height>171</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>210</y>
+        <width>1551</width>
+        <height>531</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2"/>
+     </widget>
+     <widget class="QPushButton" name="retrieveData">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>170</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>数据查询测试</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="filters">
+      <property name="geometry">
+       <rect>
+        <x>241</x>
+        <y>128</y>
+        <width>631</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="placeholderText">
+       <string>筛选条件，默认: 空，形如：and (发电机定子铁芯铜屏蔽温度1_汽端 &lt;= 100)</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>241</x>
+        <y>12</y>
+        <width>631</width>
+        <height>85</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <layout class="QFormLayout" name="formLayout_3">
+         <item row="0" column="0">
+          <widget class="QLabel" name="databaseName_label">
+           <property name="text">
+            <string>数据库名称</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="databaseName_edit">
+           <property name="currentText">
+            <string>stator_core_temper_copperisolate</string>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>stator_core_temper_copperisolate</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>stator_core_temper_fingerpress</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>stator_core_temper_ringpress</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>stator_core_temper_teeth</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>stator_core_temper_yoke</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>laizhou_2021</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <layout class="QFormLayout" name="formLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="tableName_label">
+           <property name="text">
+            <string>表名称</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="tableName_edit">
+           <item>
+            <property name="text">
+             <string>20210301_20210531莱州铁芯铜屏蔽调整结构</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>20210301_20210531莱州铁芯压指调整结构</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>20210301_20210531莱州铁芯压圈调整结构</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>20210301_20210531莱州铁芯齿部调整结构</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>20210301_20210531莱州铁芯轭部调整结构</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>莱州1号机组2022年01月18号发电机相关数据</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="tableName_label_2">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>开始时间</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="startDate">
+           <property name="dateTime">
+            <datetime>
+             <hour>0</hour>
+             <minute>0</minute>
+             <second>0</second>
+             <year>2021</year>
+             <month>3</month>
+             <day>1</day>
+            </datetime>
+           </property>
+           <property name="displayFormat">
+            <string>yyyy-MM-dd</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTimeEdit" name="startTime">
+           <property name="displayFormat">
+            <string>HH:mm:ss</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="tableName_label_4">
+           <property name="text">
+            <string>截止时间</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="endDate">
+           <property name="dateTime">
+            <datetime>
+             <hour>0</hour>
+             <minute>0</minute>
+             <second>0</second>
+             <year>2021</year>
+             <month>6</month>
+             <day>1</day>
+            </datetime>
+           </property>
+           <property name="displayFormat">
+            <string>yyyy-MM-dd</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTimeEdit" name="endTime">
+           <property name="displayFormat">
+            <string>HH:mm:ss</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLineEdit" name="mysqlRetrieveContent">
+      <property name="geometry">
+       <rect>
+        <x>241</x>
+        <y>101</y>
+        <width>631</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>查询命令，默认:'时间戳,发电机定子铁芯铜屏蔽温度1_汽端...',可选count(*),不允许‘*’</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabPage2">
+     <attribute name="title">
+      <string>数据处理</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>10</y>
+        <width>461</width>
+        <height>721</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="layout_hists"/>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>511</width>
+        <height>721</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="layout_lines"/>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>10</y>
+        <width>141</width>
+        <height>721</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="extreamSliderLayout"/>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>730</y>
+        <width>1041</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>    注意：对单个测点数据进行筛选时，其它测点样本会联动（数据一致性保证）</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>1140</x>
+        <y>10</y>
+        <width>431</width>
+        <height>671</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QTextBrowser" name="textBrowser_dataTransfer"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>1430</x>
+        <y>690</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="1" column="0">
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="genSqlCriticalParamBtn">
+           <property name="text">
+            <string>打印SQL关键参数</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
